@@ -18,3 +18,7 @@ result = streamlit_bokeh_events(
     refresh_on_update=False,
     override_height=75,
     debounce_time=0)
+
+if result:
+    if "GET_LOCATION" in result:
+        st.write(result.get("GET_LOCATION"))
